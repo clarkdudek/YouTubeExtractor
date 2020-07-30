@@ -172,7 +172,7 @@ class YouTubeExtractor private constructor(builder: Builder) {
 
         val playerCode = urlToString(playerUrl)
             .replace("\n", "")
-        val decryptionCode = JavaScriptUtil.loadDecryptionCode(playerCode)
+        val decryptionCode = null
 
         playerResponse.streamingData?.formats?.forEach {
             parseItag(it, decryptionCode, urlAndItags)
